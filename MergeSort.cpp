@@ -40,21 +40,6 @@ void merge(int low, int mid, int high)
     int j = mid + 1;
     int k = low;
 
-    while (i <= mid && j <= high)
-    {
-        if (arr[i] < arr[j])
-        {
-            B[k] = arr[i];
-            i++;
-        }
-        else
-        {
-            B[k] = arr[j];
-            j++;
-        }
-        k++;
-    }
-
     while (i <= mid)
     {
         B[k] = arr[i];
