@@ -59,3 +59,15 @@ void merge(int low, int mid, int high)
         arr[i] = B[i];
     }
 }
+
+
+void mergeSort(int low, int high)
+{
+    if (low < high)
+    {
+        int mid = (low + high) / 2;
+        mergeSort(low, mid);
+        mergeSort(mid + 1, high);
+        merge(low, mid, high);
+    }
+}
